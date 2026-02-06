@@ -3,40 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="CSS/V1Css.css"> <!-- Updated path to CSS file -->
+    <meta name="description" content="Bitcoin Beverage Co. - Quench your Curiosity. Sip on Sovereignty. Premium carbonated beverages with Bitcoin education.">
+    <title>Bitcoin Beverage Co. | Sip on Sovereignty</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-
-<div class="header">
-    <a href="https://www.google.com" target="_blank"><img src="Assets/HeaderLogo.png" alt="Logo" class="header-logo"></a>
-    <a href="ProductsPage.html" target="_blank">Products</a>
-    <a href="https://www.google.com" target="_blank">Preorder</a>
-    <a href="Advertisers.html" target="_blank">Advertise</a>
-    <a href="AboutUs.html">About us</a>
-    <a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a>
-    <a href="mailto:btcbevs@gmail.com" target="_blank">Contact</a>
-</div>
-
-<div class="background-container">
-    <div class="container">
-        <div class="title-container">
-            <span>Bitcoin Beverage Co.</span>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="Assets/HeaderLogo.png" alt="Bitcoin Beverage Co." class="logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ProductsPage.html">Products</a></li>
+                <li><a href="#preorder">Preorder</a></li>
+                <li><a href="Advertisers.html">Advertise</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a></li>
+                <li><a href="mailto:btcbevs@gmail.com">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">☰</button>
         </div>
-    </div>
-    <div class="overlay-image">
-        <img src="Assets/Clear_Bottles1.jpg" alt="Overlay Image" class="overlay-image-content">
-    </div>
-</div>
+    </nav>
 
-<div class="scrollable-content">
-    <div class="content">
-        <p>Quench your Curiosity & Sip on Sovereignty.</p>
-        <p>Bitcoin Beverages (BTC Bevs) is on a mission to revolutionize not just the beverage industry, but also financial literacy, particularly among young Americans. Our line of carbonated and flavored lemonade beverages offers a premium product that indulges the taste buds while providing a simple and digestible gateway to understanding the complexities of economics and finance, specifically centered around Bitcoin, and its value proposition.</p>
-        <p>Purpose: Improvement of individual comprehension of financial literacy while simultaneously providing a tenable solution to the issue of fiat debasement.</p>
-        <!-- Repeat or add more content here -->
-    </div>
-</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bitcoin Beverage Co.</h1>
+            <p class="hero-subtitle">Quench your Curiosity. Sip on Sovereignty.</p>
+            <div class="hero-cta">
+                <a href="ProductsPage.html" class="btn btn-primary">Explore Products</a>
+                <a href="AboutUs.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Assets/Clear_Bottles1.jpg" alt="Bitcoin Beverage Products">
+        </div>
+    </section>
 
+    <!-- Value Proposition Section -->
+    <section class="section value-prop">
+        <div class="section-title">
+            <h2>Why Bitcoin Beverage Co.?</h2>
+        </div>
+        <div class="value-grid">
+            <div class="value-card scroll-reveal">
+                <div class="value-card-icon">🚀</div>
+                <h3>Financial Literacy</h3>
+                <p>We're revolutionizing financial education by making Bitcoin accessible through premium beverages. Each sip is a step toward understanding digital currency and economic sovereignty.</p>
+            </div>
+            <div class="value-card scroll-reveal">
+                <div class="value-card-icon">💰</div>
+                <h3>Free Bitcoin in Every Bottle</h3>
+                <p>Every purchase includes free Bitcoin, providing real-world exposure to cryptocurrency while you enjoy our premium carbonated beverages.</p>
+            </div>
+            <div class="value-card scroll-reveal">
+                <div class="value-card-icon">🎯</div>
+                <h3>Premium Quality</h3>
+                <p>Made with real cane sugar and premium ingredients, our beverages offer an indulgent experience that meets the highest quality standards.</p>
+            </div>
+            <div class="value-card scroll-reveal">
+                <div class="value-card-icon">🌱</div>
+                <h3>Youth-Focused</h3>
+                <p>Designed for the next generation, we're building financial literacy from the ground up, making complex economic concepts digestible and engaging.</p>
+            </div>
+            <div class="value-card scroll-reveal">
+                <div class="value-card-icon">🤝</div>
+                <h3>Dual Revenue Model</h3>
+                <p>Our innovative business model combines product sales with strategic advertising partnerships, creating multiple revenue streams.</p>
+            </div>
+            <div class="value-card scroll-reveal">
+                <div class="value-card-icon">⚡</div>
+                <h3>Market Timing</h3>
+                <p>Riding the tailwinds of the crypto market cycle, we're positioned at the intersection of beverage innovation and financial technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="section mission">
+        <div class="mission-statement scroll-reveal">
+            <p>Bitcoin Beverages is more than just a beverage company—it's a catalyst for financial literacy and individual empowerment. We're challenging conventional wisdom and paving the way for a new generation of economically savvy individuals. Through education and innovation, we aim to reshape the way people understand and interact with finance, one sip at a time.</p>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="section products">
+        <div class="section-title">
+            <h2>Our Products</h2>
+            <p>Premium carbonated beverages made with real cane sugar</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card scroll-reveal">
+                <img src="Assets/Passion_Guava.jpeg" alt="Passion Guava" class="product-image">
+                <div class="product-info">
+                    <h3>Passion Guava</h3>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <img src="Assets/W3_Watermelon.jpeg" alt="W3 Watermelon" class="product-image">
+                <div class="product-info">
+                    <h3>W3 Watermelon</h3>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <img src="Assets/B_Tea_Sea.jpeg" alt="B Tea Sea" class="product-image">
+                <div class="product-info">
+                    <h3>B Tea Sea</h3>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <img src="Assets/Liquid_gold.jpeg" alt="Liquid Gold" class="product-image">
+                <div class="product-info">
+                    <h3>Liquid Gold</h3>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <img src="Assets/Solvent_Red_Diesel.jpeg" alt="Solvent Red Diesel" class="product-image">
+                <div class="product-info">
+                    <h3>Solvent Red Diesel</h3>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="ProductsPage.html" class="btn btn-primary">View All Products</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="ProductsPage.html">Products</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="Advertisers.html">Advertise</a>
+                <a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a>
+                <a href="mailto:btcbevs@gmail.com">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bitcoin Beverage Co. All rights reserved. | Sip on Sovereignty</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Force immediate responsive recalculation on window resize
+        // This ensures viewport units (vw) recalculate smoothly on every resize
+        let resizeTimer;
+        
+        window.addEventListener('resize', () => {
+            // Cancel any pending resize handlers
+            if (resizeTimer) {
+                cancelAnimationFrame(resizeTimer);
+            }
+            
+            // Use requestAnimationFrame for smooth, immediate updates
+            resizeTimer = requestAnimationFrame(() => {
+                // Force browser to recalculate by triggering a reflow
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    // Reading offsetHeight forces a reflow, making browser recalculate vw units
+                    void hero.offsetHeight;
+                }
+            });
+        }, { passive: true });
+    </script>
 </body>
 </html>

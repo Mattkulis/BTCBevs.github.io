@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════════
+  BITCOIN BEVERAGE CO. - QUICK START GUIDE
+═══════════════════════════════════════════════════════════
+
+METHOD 1: Use PowerShell Script (Recommended)
+───────────────────────────────────────────────
+1. Right-click on "start-server-fixed.ps1"
+2. Select "Run with PowerShell"
+3. If you get a security warning, type: Y and press Enter
+4. Open your browser and go to: http://localhost:8080
+
+
+METHOD 2: Manual PowerShell Commands
+────────────────────────────────────
+1. Open PowerShell
+2. Run these commands:
+
+   cd C:\Users\User\Desktop\mkoolass.github.io\docs
+   python -m http.server 8080
+
+3. Open browser to: http://localhost:8080
+
+
+METHOD 3: Open File Directly (No Server)
+─────────────────────────────────────────
+1. Navigate to: C:\Users\User\Desktop\mkoolass.github.io\docs
+2. Double-click: index.html
+   (Note: Some features work better with a server)
+
+
+TROUBLESHOOTING
+───────────────
+If http://localhost:8080 doesn't work, try:
+  • http://127.0.0.1:8080
+  • Check if Windows Firewall is blocking
+  • Try a different browser
+  • Make sure Python is installed (python --version)
+
+
+STOPPING THE SERVER
+───────────────────
+Press Ctrl+C in the PowerShell window
+
+
+═══════════════════════════════════════════════════════════

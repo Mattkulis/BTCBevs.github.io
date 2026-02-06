@@ -3,64 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Display</title>
+    <meta name="description" content="Advertising opportunities with Bitcoin Beverage Co. - Reach our engaged audience through strategic partnerships.">
+    <title>Advertise | Bitcoin Beverage Co.</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Ensures full viewport height */
-            background-color: #f7f6ce; /* Adjust background color as needed */
+        .advertisers-hero {
+            background: var(--gradient-dark);
+            color: var(--text-light);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
         }
 
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px; /* Space between images */
+        .advertisers-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        img {
-            width: auto;
-            max-height: 800px;
-            
+        .advertisers-hero p {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        h1, h2 {
-            color: orange;
-            font-size: 5vw;
-            font-weight: bold;
-            text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
-            -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color: black;
-            position: relative;
-            max-width: 100%;
-            font-family: 'CustomFont', Arial, sans-serif;
-
-            /* Rounded rectangle background */
-            background-color: #143983;
-            padding: 10px 10px;
-            border-radius: 10px;
-            display: inline-block;
-            text-align: center; /* Center align the text */
+        .advertisers-content {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        h2 {
-            font-size: 3vw;
+        .advertisers-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .advertisers-intro h2 {
+            color: var(--dark-blue);
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .advertisers-intro p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .advertiser-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .advertiser-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+        }
+
+        .advertiser-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .advertiser-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-radius: 20px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .advertiser-images {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Prospective Advertisers</h1>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="Assets/HeaderLogo.png" alt="Bitcoin Beverage Co." class="logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ProductsPage.html">Products</a></li>
+                <li><a href="index.html#preorder">Preorder</a></li>
+                <li><a href="Advertisers.html">Advertise</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a></li>
+                <li><a href="mailto:btcbevs@gmail.com">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
 
-    <div class="image-container">
-        <img src="Assets\Advertiser1.jpg" alt="advertiser1">
-        <img src="Assets\Advertiser2.png" alt="Advertiser2">
-    </div>
+    <!-- Advertisers Hero -->
+    <section class="advertisers-hero">
+        <h1>Advertising Opportunities</h1>
+        <p>Partner with Bitcoin Beverage Co. to reach our engaged, forward-thinking audience</p>
+    </section>
 
-    
+    <!-- Advertisers Content -->
+    <section class="advertisers-content">
+        <div class="advertisers-intro scroll-reveal">
+            <h2>Prospective Advertisers</h2>
+            <p>Bitcoin Beverage Co. offers unique advertising opportunities through strategic partnerships. Our innovative business model includes advertising space on our premium beverage bottles, allowing brands to reach our engaged audience of crypto-enthusiasts, financial literacy advocates, and forward-thinking consumers.</p>
+            <p>By partnering with us, advertisers gain access to a unique demographic that values innovation, financial education, and premium quality products. Our dual revenue model creates a win-win scenario for both our company and our advertising partners.</p>
+        </div>
+
+        <div class="advertiser-images">
+            <div class="advertiser-card scroll-reveal">
+                <img src="Assets/Advertiser1.jpg" alt="Advertising Opportunity 1">
+            </div>
+            <div class="advertiser-card scroll-reveal">
+                <img src="Assets/Advertiser2.png" alt="Advertising Opportunity 2">
+            </div>
+        </div>
+
+        <div class="cta-section scroll-reveal">
+            <h2>Interested in Advertising?</h2>
+            <p>Contact us to learn more about our advertising opportunities and partnership packages.</p>
+            <a href="mailto:btcbevs@gmail.com" class="btn btn-secondary" style="background: white; color: var(--primary-orange); border: 2px solid white;">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="ProductsPage.html">Products</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="Advertisers.html">Advertise</a>
+                <a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a>
+                <a href="mailto:btcbevs@gmail.com">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bitcoin Beverage Co. All rights reserved. | Sip on Sovereignty</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

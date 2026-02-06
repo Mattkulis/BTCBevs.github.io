@@ -3,74 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Page</title>
-    <link rel="stylesheet" href="CSS/V1Css.css"> <!-- Updated path to CSS file -->
+    <meta name="description" content="Explore Bitcoin Beverage Co.'s premium carbonated beverages - Satoshi Sodas and Pleb Pops made with real cane sugar.">
+    <title>Products | Bitcoin Beverage Co.</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f7f6ce;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        img {
-            max-width: 225px;
-            height: auto;
-        }
-
-        h1, h2 {
-            color: orange;
-            font-size: 5vw;
-            font-weight: bold;
-            text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
-            -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color: black;
-            position: relative;
-            max-width: 100%;
-            font-family: 'CustomFont', Arial, sans-serif;
-            background-color: #143983;
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
+        .products-hero {
+            background: var(--gradient-dark);
+            color: var(--text-light);
+            padding: 8rem 2rem 4rem;
             text-align: center;
-            margin-top: 20px;
         }
 
-        h2 {
-            font-size: 3vw;
+        .products-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .products-hero p {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .product-category {
+            margin-bottom: 5rem;
+        }
+
+        .category-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .category-title h2 {
+            color: var(--dark-blue);
+            font-size: clamp(2rem, 4vw, 3rem);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1rem;
+        }
+
+        .category-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .products-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%);
+        }
+
+        .product-card-large {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            cursor: pointer;
+        }
+
+        .product-card-large:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-image-large {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background: #F1F5F9;
+        }
+
+        .product-info-large {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .product-info-large h3 {
+            color: var(--dark-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info-large p {
+            color: #64748B;
+            font-size: 1rem;
+        }
+
+        .alcoholic-section {
+            background: var(--dark-blue);
+            color: var(--text-light);
+        }
+
+        .alcoholic-section .category-title h2 {
+            color: var(--text-light);
+        }
+
+        .alcoholic-section .category-title h2::after {
+            background: var(--gradient-primary);
+        }
+
+        .alcoholic-section .product-card-large {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .alcoholic-section .product-info-large h3 {
+            color: var(--text-light);
+        }
+
+        .alcoholic-section .product-info-large p {
+            color: rgba(255, 255, 255, 0.8);
         }
     </style>
 </head>
 <body>
-    <h1>Satoshi Sodas/ Pleb Pops:</h1>
-    <h2>~Bottles of Fun for Everyone~ Made from Real Cane Sugar!</h2>
-    <div class="image-container">
-        <img src="Assets/Passion_Guava.jpeg" alt="PassionGuava">
-        <img src="Assets/W3_Watermelon.jpeg" alt="W3 Watermelon">
-        <img src="Assets/Clear_Bottles1.jpg" alt="Clear Bottles">
-        <img src="Assets/B_Tea_Sea.jpeg" alt="BTSEA">
-        <img src="Assets/Liquid_gold.jpeg" alt="Liquid Gold">
-        <img src="Assets/Solvent_Red_Diesel.jpeg" alt="Solvent Red Diesel">
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="Assets/HeaderLogo.png" alt="Bitcoin Beverage Co." class="logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ProductsPage.html">Products</a></li>
+                <li><a href="index.html#preorder">Preorder</a></li>
+                <li><a href="Advertisers.html">Advertise</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a></li>
+                <li><a href="mailto:btcbevs@gmail.com">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
 
-    <h2>Mixed drinks/ Beers</h2>
-    <div class="image-container">
-        <img src="Assets/CachacaV1.jpeg" alt="Cachaca V1">
-        <img src="Assets/CachacaV2.jpeg" alt="Cachaca V2">
-        <img src="Assets/ALC_line_aluminum.jpg" alt="Aluminum Cans">
-        <img src="Assets/BC_Buzz.jpeg" alt="Blockchain Buzz">
-    </div>
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <h1>Satoshi Sodas / Pleb Pops</h1>
+        <p>Bottles of Fun for Everyone - Made from Real Cane Sugar!</p>
+    </section>
+
+    <!-- Non-Alcoholic Products -->
+    <section class="products-section">
+        <div class="product-category">
+            <div class="category-title">
+                <h2>Carbonated Beverages</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/Passion_Guava.jpeg" alt="Passion Guava" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Passion Guava</h3>
+                        <p>Refreshing tropical flavor with a hint of passion fruit</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/W3_Watermelon.jpeg" alt="W3 Watermelon" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>W3 Watermelon</h3>
+                        <p>Cool and crisp watermelon flavor</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/Clear_Bottles1.jpg" alt="Clear Bottles" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Premium Collection</h3>
+                        <p>Our signature line of premium carbonated beverages</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/B_Tea_Sea.jpeg" alt="B Tea Sea" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>B Tea Sea</h3>
+                        <p>Unique tea-infused carbonated beverage</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/Liquid_gold.jpeg" alt="Liquid Gold" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Liquid Gold</h3>
+                        <p>Premium golden citrus flavor</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/Solvent_Red_Diesel.jpeg" alt="Solvent Red Diesel" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Solvent Red Diesel</h3>
+                        <p>Bold and energizing flavor profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alcoholic Products -->
+    <section class="products-section alcoholic-section">
+        <div class="product-category">
+            <div class="category-title">
+                <h2>Mixed Drinks & Beers</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/CachacaV1.jpeg" alt="Cachaca V1" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Cachaca V1</h3>
+                        <p>Premium Brazilian spirit blend</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/CachacaV2.jpeg" alt="Cachaca V2" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Cachaca V2</h3>
+                        <p>Enhanced premium blend</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/ALC_line_aluminum.jpg" alt="Aluminum Cans" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Aluminum Line</h3>
+                        <p>Premium canned beverages</p>
+                    </div>
+                </div>
+                <div class="product-card-large scroll-reveal">
+                    <img src="Assets/BC_Buzz.jpeg" alt="Blockchain Buzz" class="product-image-large">
+                    <div class="product-info-large">
+                        <h3>Blockchain Buzz</h3>
+                        <p>Energizing blockchain-inspired blend</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="ProductsPage.html">Products</a>
+                <a href="AboutUs.html">About Us</a>
+                <a href="Advertisers.html">Advertise</a>
+                <a href="https://www.youtube.com/@btcbevs" target="_blank">Media</a>
+                <a href="mailto:btcbevs@gmail.com">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bitcoin Beverage Co. All rights reserved. | Sip on Sovereignty</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
