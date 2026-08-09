@@ -1,4 +1,4 @@
-This is the codebase for Btcbevs.com A concept for a beverage company which subsidizes costs via advertisements placed on the sides of each bottle.
+This is the codebase for Btcbevs.com A concept for a bitcoin themed beverage company in which cost-per unit is subsidized via advertisements placed on the sides of each bottle.
 The concept is simple: inflation is a given; the internet is the ultimate democratizing force, connecting people with information and each other in a decentralized manner.
 It reduces barriers to entry, levels the playing field in terms of access to knowledge, and offers ways to circumvent centralized authority that might otherwise restrict such access.
 As such i believe that bitcoin is at the crossoads of this as a viable alternative to fiat currency in global transactions, and an instrument capable of protecting the purchasing power of individuals
